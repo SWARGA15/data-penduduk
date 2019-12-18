@@ -95,7 +95,8 @@ HEREDOCS;
 	            $cek = $_mysqli->query("SELECT nama FROM penduduk WHERE nik = '$nik'");
 	            $cek1 = mysqli_num_rows($cek);
 	            $cekakses = $_mysqli->query("SELECT * FROM hak_akses_user WHERE id_akses='akses04' AND nik = '$nik'");
-	            $cek2 = mysqli_num_rows($cekakses);
+				$cek2 = mysqli_num_rows($cekakses);
+
 	            if ($cek2 > 0) {
 	            	$nilai =
 <<<HEREDOCS
@@ -132,7 +133,7 @@ HEREDOCS;
 						return TRUE;
 	            		}else{
 	            			$res = $_mysqli->query("ROLLBACK");
-	            			var_dump($res);
+	            			// var_dump($res);
 
 	            			$nilai =
 <<<HEREDOCS
@@ -148,7 +149,21 @@ HEREDOCS;
 			            header('location:index.php');
 			            return TRUE;
 		            	}
-		            }
+		            }else{
+	            			$nilai =
+<<<HEREDOCS
+						<!-- Danger Alert -->
+			            <div class="alert alert-danger alert-dismissable">
+			                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			                <h4><strong>Pendaftaran Gagal</strong></h4>
+			                <p>Mohon maaf, NIK anda belum terdaftar sebagai warga. Mohon hubungi pihak pengurus !</p>
+			            </div>
+			            <!-- END Danger Alert -->
+HEREDOCS;
+						setcookie("alert", $nilai, time()+2);
+			            header('location:index.php');
+			            return TRUE;
+					}
 	            }
 		}
 
