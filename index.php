@@ -62,7 +62,7 @@
                 <!-- Login Title -->
                 <div class="block-title">
                     <div class="block-options pull-right">
-                        <a href="register/register.php" class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="Buat akun baru"><i class="fa fa-plus"></i></a>
+                        <a href="daftar.php" class="btn btn-effect-ripple btn-primary" data-toggle="tooltip" data-placement="left" title="Buat akun baru"><i class="fa fa-plus"></i></a>
                     </div>
                     <h2>Silahkan Login </h2>
                 </div>
