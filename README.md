@@ -1,2 +1,2 @@
 # data-penduduk
-Aplikasi input data KK berdasarkan user
+Aplikasi input data KK berdasarkan user. Memggunakan Mysql dan PHP OOP
