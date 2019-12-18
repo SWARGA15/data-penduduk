@@ -100,7 +100,7 @@ if (isset($_POST['daftar'])) {
                             <a href="#modal-terms" data-toggle="modal">Aturan</a>
                         </div>
                         <div class="col-xs-6 text-right">
-                            <button type="submit" class="btn btn-effect-ripple btn-success" name="daftar"><i class="fa fa-plus"></i> Buat Akun</button>
+                            <button type="submit" class="btn btn-effect-ripple btn-success" name="daftar" value="register"><i class="fa fa-plus"></i> Buat Akun</button>
                         </div>
                     </div>
                 </form>
